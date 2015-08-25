@@ -232,16 +232,15 @@ TKAnswersService, ServerAnswersService, $ionicHistory, TKResultsButtonService, S
     //testInfo is passed in the router to indicate the index
     var qNumber = $stateParams.testID;
     $scope.title = "Question #"+qNumber;
-    
-    TKAnswersService.setLastQuestionNumber(qNumber);
 
     $scope.$on("$ionicView.beforeEnter", function(){
         var lastQuestionNumber = TKAnswersService.getLastQuestionNumber();
-        if(qNumber<lastQuestionNumber)
+        if(parseInt(qNumber)<lastQuestionNumber)
         {
             TKAnswersService.setLastQuestionNumber(lastQuestionNumber-1);
             TKAnswersService.eraseLastAnswer();
         }
+        TKAnswersService.setLastQuestionNumber(qNumber);
     });
     
     testInfo.forEach(function(infoDict)

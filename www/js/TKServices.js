@@ -39,7 +39,7 @@ angular.module('TKServicesModule', [])
     var categoriesStack = [];
     
     service.setLastQuestionNumber = function(qNumber){
-        lastQuestionNumber = qNumber;  
+        lastQuestionNumber = parseInt(qNumber);  
     };
     
     service.getLastQuestionNumber = function() {
