@@ -14,8 +14,7 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
-  
-  <gap:plugin name="org.apache.cordova.dialogs" version="0.2.10" />
+
   
   <platform name="ios">
     <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
@@ -69,5 +68,11 @@
   
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+  <feature name="Notification">
+    <param name="ios-package" value="CDVNotification" />
+  </feature>
+  <feature name="Notification">
+      <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
   </feature>
 </widget>
