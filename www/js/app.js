@@ -63,6 +63,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'RESTConnection', 'TK
     }
   })
   .state('results', {
+    cache:false,
     url: '/results',
     templateUrl: 'templates/results.html',
     controller:'ResultsCtrl'
