@@ -74,12 +74,7 @@
   <feature name="StatusBar">
     <param name="ios-package" value="CDVStatusBar" onload="true"/>
   </feature>
-<<<<<<< HEAD
-  <feature name="Notification">
-    <param name="ios-package" value="CDVNotification" />
-  </feature>
 
   <gap:plugin name="org.apache.cordova.dialogs" />
-=======
->>>>>>> parent of 855e43a... plugin fix
+
 </widget>
