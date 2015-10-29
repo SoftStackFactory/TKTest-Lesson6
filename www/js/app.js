@@ -13,11 +13,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'RESTConnection', 'TK
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
     }
     if(window.StatusBar) {
-      StatusBar.styleDefault();
+      StatusBar.overlaysWebView(true)
+      StatusBar.StatusBar.styleLightContent();
     }
     
     if($window.localStorage["userID"]!==undefined)
     {
+        $ionicHistory.nextViewOptions({
+            historyRoot: true,
+            disableBack: true
+        });
         $state.go("lobby");
     }
   });
